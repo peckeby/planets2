@@ -1,18 +1,18 @@
-import { NavLink } from 'react-router-dom';
+import { NavBar, LinkNav } from './Header.styled';
 
 export default function Header() {
   return (
-    <>
+    <Header>
       <h1>the planets</h1>
-      <nav>
-        <NavLink to={'/mercury'}>mercury</NavLink>
-        <NavLink to={'/venus'}>venus</NavLink>
-        <NavLink to={'/earth'}>earth</NavLink>
-        <NavLink to={'/mars'}>mars</NavLink>
-        <NavLink to={'/jupiter'}>jupiter</NavLink>
-        <NavLink to={'/saturn'}>saturn</NavLink>
-        <NavLink to={'/uranus'}>uranus</NavLink>
-      </nav>
-    </>
+      <NavBar>
+        <LinkNav to={'/mercury'}>mercury</LinkNav>
+        <LinkNav to={'/venus'}>venus</LinkNav>
+        <LinkNav to={'/earth'}>earth</LinkNav>
+        <LinkNav to={'/mars'}>mars</LinkNav>
+        <LinkNav to={'/jupiter'}>jupiter</LinkNav>
+        <LinkNav to={'/saturn'}>saturn</LinkNav>
+        <LinkNav to={'/uranus'}>uranus</LinkNav>
+      </NavBar>
+    </Header>
   );
 }

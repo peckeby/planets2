@@ -9,7 +9,7 @@ export const fetchInfo = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const { data } = await axios.get('/planets');
-      return JSON.parse(data);
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

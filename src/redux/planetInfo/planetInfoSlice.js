@@ -8,12 +8,13 @@ const pending = state => {
 const fulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  state.data = [...state.data, action.payload];
+  state.data = state.data.concat(action.payload);
 };
 
 const rejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
+  alert(state.error);
 };
 
 const planetInfoSlice = createSlice({

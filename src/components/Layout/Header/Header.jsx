@@ -1,8 +1,8 @@
-import { NavBar, LinkNav } from './Header.styled';
+import { HeaderStyled, NavBar, LinkNav } from './Header.styled';
 
 export default function Header() {
   return (
-    <Header>
+    <HeaderStyled>
       <h1>the planets</h1>
       <NavBar>
         <LinkNav to={'/mercury'}>mercury</LinkNav>
@@ -13,6 +13,6 @@ export default function Header() {
         <LinkNav to={'/saturn'}>saturn</LinkNav>
         <LinkNav to={'/uranus'}>uranus</LinkNav>
       </NavBar>
-    </Header>
+    </HeaderStyled>
   );
 }

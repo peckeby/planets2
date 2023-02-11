@@ -1,7 +1,7 @@
-import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
-export const Header = styled.div`
+export const HeaderStyled = styled.div`
   display: flex;
   justify-content: space-between;
 `;

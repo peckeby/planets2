@@ -24,6 +24,15 @@ h1 {
   font-family: 'Antonio';
   font-size: 28px;
   line-height: 36px;
+  margin: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'Antonio';
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
 }
 
 p {
@@ -41,7 +50,8 @@ a {
 .mainContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh}
+  height: 100vh;
+}
 
 main {
   flex: 1 0 auto;

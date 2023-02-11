@@ -5,10 +5,11 @@ import { Suspense } from 'react';
 // import { Container } from './Layout.styled';
 import Header from './Header/Header';
 import { GlobalStyle } from 'components/GlobalStyle';
+import WelcomePage from 'components/pages/WelcomePage/WelcomePage';
 
 function Layout() {
   return (
-    <div>
+    <body className="mainContainer">
       <Header />
       <main>
         {/* <Container> */}
@@ -18,7 +19,7 @@ function Layout() {
         {/* </Container> */}
       </main>
       <GlobalStyle />
-    </div>
+    </body>
   );
 }
 

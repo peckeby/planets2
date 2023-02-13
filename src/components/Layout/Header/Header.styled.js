@@ -1,28 +1,31 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderStyled = styled.div`
+export const NavBar = styled.nav`
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 27px;
-  padding: 22px 40px 27px 31px;
-`;
-
-export const NavBar = styled.div`
-  display: flex;
-  gap: 33px;
+  gap: 2.0625rem;
   align-items: center;
 `;
 
 export const LinkNav = styled(NavLink)`
-  font-family: 'League Spartan';
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
+  font-family: 'Spartan';
+  font-size: 0.6875rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   opacity: 0.75;
+  font-weight: 700;
 `;
 
-export const SpanHr = styled.div`
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+export const LinkHeadline = styled(NavLink)`
+  text-transform: uppercase;
+  font-family: 'Antonio';
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin: 0;
+`;
+
+export const SpanHr = styled.span`
+  width: 100vw;
+  border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
 `;

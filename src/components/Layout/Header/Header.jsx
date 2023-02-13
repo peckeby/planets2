@@ -1,10 +1,10 @@
-import { HeaderStyled, NavBar, LinkNav, SpanHr } from './Header.styled';
+import { NavBar, LinkNav, SpanHr, LinkHeadline } from './Header.styled';
 
 export default function Header() {
   return (
-    <SpanHr>
-      <HeaderStyled>
-        <h1>the planets</h1>
+    <>
+      <header>
+        <LinkHeadline to="/">the planets</LinkHeadline>
         <NavBar>
           <LinkNav to={'/mercury'}>mercury</LinkNav>
           <LinkNav to={'/venus'}>venus</LinkNav>
@@ -13,8 +13,10 @@ export default function Header() {
           <LinkNav to={'/jupiter'}>jupiter</LinkNav>
           <LinkNav to={'/saturn'}>saturn</LinkNav>
           <LinkNav to={'/uranus'}>uranus</LinkNav>
+          <LinkNav to={'/neptune'}>neptune</LinkNav>
         </NavBar>
-      </HeaderStyled>
-    </SpanHr>
+      </header>
+      <SpanHr />
+    </>
   );
 }

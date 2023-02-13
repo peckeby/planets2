@@ -19,18 +19,10 @@ ul {
     padding-left: 0;
 }
 
-h1 {
-  text-transform: uppercase;
-  font-family: 'Antonio';
-  font-size: 28px;
-  line-height: 36px;
-  margin: 0;
-}
-
 h2 {
   text-transform: uppercase;
   font-family: 'Antonio';
-  font-size: 18px;
+  font-size: 28px;
   line-height: 26px;
   margin: 0;
 }
@@ -50,11 +42,14 @@ a {
 .mainContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  max-height: 64rem;
+  padding: 22px 0px 56px 0px;
+  max-width: 1440px;
 }
 
 main {
   flex: 1 0 auto;
+  padding: 13.25rem 10.3125rem 3.5rem 10.3125rem;
 }
 
 ul {
@@ -64,5 +59,12 @@ ul {
 
 button {
   padding: 0;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 41px 27px 31px;
 }
 `;

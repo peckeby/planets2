@@ -8,7 +8,7 @@ import { GlobalStyle } from 'components/GlobalStyle';
 
 function Layout() {
   return (
-    <body className="mainContainer">
+    <div className="mainContainer">
       <Header />
       <main>
         {/* <Container> */}
@@ -18,7 +18,7 @@ function Layout() {
         {/* </Container> */}
       </main>
       <GlobalStyle />
-    </body>
+    </div>
   );
 }
 

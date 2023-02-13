@@ -1,0 +1,8 @@
+.addimg {
+  display: none;
+}
+
+.geologyImg:hover ~ .addimg {
+  display: block;
+  cursor: pointer;
+}

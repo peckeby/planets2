@@ -2,39 +2,26 @@ import { StatsSection } from 'components/StatsSection/StatsSection';
 import { useSelector } from 'react-redux';
 import { getData } from 'redux/planetInfo/selectors';
 import PropTypes from 'prop-types';
+import { Outlet, useLocation } from 'react-router-dom';
+import Overview from '../../Overview/Overview';
+import { SectionMain } from './PlanetPage.styled';
 
 export default function PlanetPage({ index }) {
   const data = useSelector(getData);
+  const location = useLocation();
+  // console.log(location);
 
   return (
     <>
-      {data && (
-        <div>
-          <section>
-            <img src={data[index].images.planet} alt="planet" width={336} />
-            <div>
-              <p>{data[index].overview.content}</p>
-              <p>Source</p>
-              <a href={data[index].overview.source}>Wikipedia</a>
-            </div>
-            <div>
-              <div>
-                <span>1</span>
-                <button>Overview</button>
-              </div>
-              <div>
-                <span>2</span>
-                <button>Internal structure</button>
-              </div>
-              <div>
-                <span>3</span>
-                <button>Surface geology</button>
-              </div>
-            </div>
-          </section>
-          <StatsSection data={data} idx={index} />
-        </div>
-      )}
+      <div>
+        <SectionMain>
+          {location.pathname === `/${data[index].name.toLowerCase()}` && (
+            <Overview index={index} />
+          )}
+          <Outlet />
+        </SectionMain>
+        <StatsSection data={data} idx={index} />
+      </div>
     </>
   );
 }

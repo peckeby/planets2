@@ -1,4 +1,4 @@
-export const colorArr = [
+export const colorSizeArr = [
   { planetName: 'mercury', color: '#419EBB', size: 290 },
   { planetName: 'venus', color: '#EDA249', size: 400 },
   { planetName: 'earth', color: '#6D2ED5', size: 450 },

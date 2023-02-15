@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const ImgPlanet = styled.img`
   padding-left: 10.625rem;
   padding-top: 1.875rem;
+
+  @media screen and (max-height: 1000px) {
+  } ;
 `;
 
 export const DivInfo = styled.section`

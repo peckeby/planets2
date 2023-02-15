@@ -27,6 +27,9 @@ header {
 main {
   flex: 1 0 auto;
   padding: 5.25rem 10.3125rem 3.5rem 10.3125rem;
+
+  @media screen and (max-height: 1000px) {
+  };
 }
 
 ul {
@@ -63,7 +66,8 @@ button {
 .mainContainer {
   display: flex;
   flex-direction: column;
-  height:100vh;
   padding: 1.375rem 0 3.5rem 0;
+  @media screen and (max-height: 1000px) {
+  };
 }
 `;

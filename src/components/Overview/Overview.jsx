@@ -15,12 +15,12 @@ import {
   SourseDiv,
   SpanNum,
 } from './Overview.styled';
-import { colorArr } from 'assets/backgroundColors';
+import { colorSizeArr } from 'assets/colorsSizeArr';
 
 export default function Overview({ index }) {
   const data = useSelector(getData);
   const overview = `/${data[index].name.toLowerCase()}`;
-  const colorPlanet = colorArr[index];
+  const colorPlanet = colorSizeArr[index];
 
   return (
     <>

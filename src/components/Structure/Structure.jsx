@@ -1,4 +1,4 @@
-import { colorArr } from 'assets/backgroundColors';
+import { colorSizeArr } from 'assets/colorsSizeArr';
 import {
   Button,
   ButtonItem,
@@ -23,7 +23,7 @@ export default function Structure({ index }) {
   const overview = `/${data[index].name.toLowerCase()}`;
   const locate = data[index].images.internal;
 
-  const colorPlanet = colorArr[index];
+  const colorPlanet = colorSizeArr[index];
 
   return (
     <>

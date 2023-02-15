@@ -8,6 +8,7 @@ import PlanetPage from './pages/PlanetPage/PlanetPage';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import Structure from './Structure/Structure';
 import Geology from './Geology/Geology';
+import { Loader } from './Loader/Loader';
 
 export const App = () => {
   const loading = useSelector(getIsLoading);
@@ -20,7 +21,7 @@ export const App = () => {
   return (
     <>
       {loading ? (
-        <p>Please, wait</p>
+        <Loader />
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>

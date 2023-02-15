@@ -1,7 +1,21 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getData } from 'redux/planetInfo/selectors';
-import s from './Geology.module.css';
+import {
+  Button,
+  ButtonItem,
+  ButtonList,
+  DivInfo,
+  ImgPlanet,
+  InfoSection,
+  InfoText,
+  NamePlanet,
+  SourceLink,
+  SourseDiv,
+  SpanNum,
+} from 'components/Overview/Overview.styled';
+import { ImagesDiv, ImgGeology } from './Geology.styled';
+import { colorArr } from 'assets/backgroundColors';
 
 export default function Geology({ index }) {
   const data = useSelector(getData);
@@ -11,44 +25,63 @@ export default function Geology({ index }) {
   const geologyImg = '.' + data[index].images.geology;
   const overviewImg = '.' + data[index].images.planet;
 
+  const colorPlanet = colorArr[index];
+
   return (
     <>
       {data && (
-        <section>
-          <img
-            className={s.geologyImg}
-            src={overviewImg}
-            alt="planet"
-            width={336}
-          />
-          <img
-            className={s.addimg}
-            src={geologyImg}
-            alt="planet"
-            width={163}
-            height={199}
-          />
-
-          <div>
-            <p>{data[index].geology.content}</p>
-            <p>Source</p>
-            <a href={data[index].geology.source}>Wikipedia</a>
-          </div>
-          <div>
-            <button type="button">
-              <span>1</span>
-              <Link to={overview}>Overview </Link>
-            </button>
-            <button type="button">
-              <span>2</span>
-              <Link to={`${overview}/structure`}>Internal structure </Link>
-            </button>
-            <button type="button">
-              <span>3</span>
-              <p>Surface geology </p>
-            </button>
-          </div>
-        </section>
+        <DivInfo>
+          <ImagesDiv>
+            <ImgPlanet
+              src={overviewImg}
+              alt="planet"
+              width={336}
+              height={336}
+            />
+            <ImgGeology
+              src={geologyImg}
+              alt="planet"
+              width={163}
+              height={199}
+            />
+          </ImagesDiv>
+          <InfoSection>
+            <NamePlanet>{data[index].name}</NamePlanet>
+            <InfoText>{data[index].geology.content}</InfoText>
+            <SourseDiv>
+              Source :{' '}
+              <SourceLink href={data[index].geology.source}>
+                Wikipedia
+              </SourceLink>
+            </SourseDiv>
+            <ButtonList>
+              <ButtonItem>
+                <Link to={overview}>
+                  <Button type="button" bkgColor={`transparent`}>
+                    <SpanNum>1</SpanNum>
+                    Overview
+                  </Button>
+                </Link>
+              </ButtonItem>
+              <ButtonItem>
+                <Link to={`${overview}/structure`}>
+                  <Button type="button" bkgColor={`transparent`}>
+                    <SpanNum>2</SpanNum>
+                    Internal structure
+                  </Button>
+                </Link>
+              </ButtonItem>
+              <ButtonItem>
+                <Link to={`${overview}/geology`}>
+                  <Button type="button" bkgColor={`${colorPlanet.color}`}>
+                    <SpanNum>3</SpanNum>
+                    Surface geology
+                  </Button>
+                </Link>
+              </ButtonItem>
+            </ButtonList>
+          </InfoSection>
+        </DivInfo>
       )}
     </>
   );

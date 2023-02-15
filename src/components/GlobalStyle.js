@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import img from '../assets/background-stars.svg';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -9,29 +10,29 @@ export const GlobalStyle = createGlobalStyle`
 --grey: #838391;
 --mercury: #419EBB;
 color: var(--white);
-background-color: var(--main);
-background-image: url('./assets/background-stars.svg');
+}
+
+body {
+  background-color: var(--main);
+  background-image: url(${img});
 }
 
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 h2 {
   text-transform: uppercase;
   font-family: 'Antonio';
-  font-size: 28px;
-  line-height: 26px;
+  font-size: 1.75rem;
+  line-height: 1.625rem;
   margin: 0;
 }
 
 p {
-    /* font-size: 24px; */
-    /* line-height: 29px; */
-    /* text-transform: uppercase; */
-    margin: 0;
+  margin: 0;
 }
 
 a {
@@ -43,18 +44,17 @@ a {
   display: flex;
   flex-direction: column;
   max-height: 64rem;
-  padding: 22px 0px 56px 0px;
-  max-width: 1440px;
+  padding: 1.375rem 0 3.5rem 0;
 }
 
 main {
   flex: 1 0 auto;
-  padding: 13.25rem 10.3125rem 3.5rem 10.3125rem;
+  padding: 5.25rem 10.3125rem 3.5rem 10.3125rem;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 button {
@@ -65,6 +65,6 @@ button {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 41px 27px 31px;
+  padding: 0 2.563rem 1.688rem 1.938rem;
 }
 `;

@@ -7,15 +7,20 @@ import {
   ButtonList,
   DivInfo,
   ImgPlanet,
+  InfoSection,
   InfoText,
+  LinkSpan,
   NamePlanet,
   SourceLink,
   SourseDiv,
+  SpanNum,
 } from './Overview.styled';
+import { colorArr } from 'assets/backgroundColors';
 
 export default function Overview({ index }) {
   const data = useSelector(getData);
   const overview = `/${data[index].name.toLowerCase()}`;
+  const colorPlanet = colorArr[index];
 
   return (
     <>
@@ -27,38 +32,41 @@ export default function Overview({ index }) {
             width={336}
             height={336}
           />
-          <div>
-            <div>
-              <NamePlanet>{data[index].name}</NamePlanet>
-              <InfoText>{data[index].overview.content}</InfoText>
-              <SourseDiv>
-                Source :{' '}
-                <SourceLink href={data[index].overview.source}>
-                  Wikipedia
-                </SourceLink>
-              </SourseDiv>
-            </div>
+          <InfoSection>
+            <NamePlanet>{data[index].name}</NamePlanet>
+            <InfoText>{data[index].overview.content}</InfoText>
+            <SourseDiv>
+              Source :{' '}
+              <SourceLink href={data[index].overview.source}>
+                Wikipedia
+                <LinkSpan />
+              </SourceLink>
+            </SourseDiv>
             <ButtonList>
               <ButtonItem>
-                <Button type="button">
-                  <span>1</span>
-                  <Link to={overview}>Overview </Link>
-                </Button>
+                <Link to={overview}>
+                  <Button type="button" bkgColor={`${colorPlanet.color}`}>
+                    <SpanNum>1</SpanNum>
+                    Overview
+                  </Button>
+                </Link>
               </ButtonItem>
               <ButtonItem>
-                <Button type="button">
-                  <span>2</span>
-                  <Link to={'structure'}>Internal structure </Link>
-                </Button>
+                <Link to={'structure'}>
+                  <Button type="button" bkgColor={`transparent`}>
+                    <SpanNum>2</SpanNum>
+                    Internal structure
+                  </Button>
+                </Link>
               </ButtonItem>
               <ButtonItem>
-                <Button type="button">
-                  <span>3</span>
-                  <Link to={'geology'}>Surface geoloy </Link>
+                <Button type="button" bkgColor={`transparent`}>
+                  <SpanNum>3</SpanNum>
+                  <Link to={'geology'}>Surface geology </Link>
                 </Button>
               </ButtonItem>
             </ButtonList>
-          </div>
+          </InfoSection>
         </DivInfo>
       )}
     </>

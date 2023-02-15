@@ -29,8 +29,8 @@ export default function Overview({ index }) {
           <ImgPlanet
             src={data[index].images.planet}
             alt="planet"
-            width={336}
-            height={336}
+            width={`${colorPlanet.size}`}
+            height={`${colorPlanet.size}`}
           />
           <InfoSection>
             <NamePlanet>{data[index].name}</NamePlanet>

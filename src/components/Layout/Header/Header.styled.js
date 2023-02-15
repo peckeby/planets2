@@ -26,6 +26,5 @@ export const LinkHeadline = styled(NavLink)`
 `;
 
 export const SpanHr = styled.span`
-  width: 100vw;
   border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
 `;

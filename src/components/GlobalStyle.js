@@ -9,14 +9,25 @@ export const GlobalStyle = createGlobalStyle`
 --info: #38384F;
 --grey: #838391;
 --mercury: #419EBB;
-color: var(--white);
 }
 
 body {
+  margin: 0;
+  color: var(--white);
   background-color: var(--main);
   background-image: url(${img});
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.563rem 1.688rem 1.938rem;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 5.25rem 10.3125rem 3.5rem 10.3125rem;
+}
 
 ul {
   list-style-type: none;
@@ -40,18 +51,6 @@ a {
   color: var(--white);
 }
 
-.mainContainer {
-  display: flex;
-  flex-direction: column;
-  max-height: 64rem;
-  padding: 1.375rem 0 3.5rem 0;
-}
-
-main {
-  flex: 1 0 auto;
-  padding: 5.25rem 10.3125rem 3.5rem 10.3125rem;
-}
-
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -61,10 +60,10 @@ button {
   padding: 0;
 }
 
-
-header {
+.mainContainer {
   display: flex;
-  justify-content: space-between;
-  padding: 0 2.563rem 1.688rem 1.938rem;
+  flex-direction: column;
+  height:100vh;
+  padding: 1.375rem 0 3.5rem 0;
 }
 `;

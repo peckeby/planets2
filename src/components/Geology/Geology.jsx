@@ -6,6 +6,7 @@ import {
   ButtonItem,
   ButtonList,
   DivInfo,
+  ImgContainer,
   ImgPlanet,
   InfoSection,
   InfoText,
@@ -14,7 +15,7 @@ import {
   SourseDiv,
   SpanNum,
 } from 'components/Overview/Overview.styled';
-import { ImagesDiv, ImgGeology } from './Geology.styled';
+import { ImgGeology } from './Geology.styled';
 import { colorSizeArr } from 'assets/colorsSizeArr';
 
 export default function Geology({ index }) {
@@ -31,12 +32,13 @@ export default function Geology({ index }) {
     <>
       {data && (
         <DivInfo>
-          <ImagesDiv>
+          <ImgContainer ind={index}>
             <ImgPlanet
+              ind={index}
               src={overviewImg}
               alt="planet"
-              width={336}
-              height={336}
+              width={`${colorPlanet.size}`}
+              height={`${colorPlanet.size}`}
             />
             <ImgGeology
               src={geologyImg}
@@ -44,7 +46,7 @@ export default function Geology({ index }) {
               width={163}
               height={199}
             />
-          </ImagesDiv>
+          </ImgContainer>
           <InfoSection>
             <NamePlanet>{data[index].name}</NamePlanet>
             <InfoText>{data[index].geology.content}</InfoText>

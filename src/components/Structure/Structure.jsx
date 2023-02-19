@@ -4,6 +4,7 @@ import {
   ButtonItem,
   ButtonList,
   DivInfo,
+  ImgContainer,
   ImgPlanet,
   InfoSection,
   InfoText,
@@ -29,7 +30,15 @@ export default function Structure({ index }) {
     <>
       {data && (
         <DivInfo>
-          <ImgPlanet src={'.' + locate} alt="planet" width={336} height={336} />
+          <ImgContainer ind={index}>
+            <ImgPlanet
+              ind={index}
+              src={'.' + locate}
+              alt="planet"
+              width={`${colorPlanet.size}`}
+              height={`${colorPlanet.size}`}
+            />
+          </ImgContainer>
           <InfoSection>
             <NamePlanet>{data[index].name}</NamePlanet>
             <InfoText>{data[index].structure.content}</InfoText>

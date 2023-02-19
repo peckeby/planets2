@@ -6,6 +6,7 @@ import {
   ButtonItem,
   ButtonList,
   DivInfo,
+  ImgContainer,
   ImgPlanet,
   InfoSection,
   InfoText,
@@ -14,6 +15,7 @@ import {
   SourceLink,
   SourseDiv,
   SpanNum,
+  TextSection,
 } from './Overview.styled';
 import { colorSizeArr } from 'assets/colorsSizeArr';
 
@@ -26,22 +28,25 @@ export default function Overview({ index }) {
     <>
       {data && (
         <DivInfo>
-          <ImgPlanet
-            src={data[index].images.planet}
-            alt="planet"
-            width={`${colorPlanet.size}`}
-            height={`${colorPlanet.size}`}
-          />
+          <ImgContainer ind={index}>
+            <ImgPlanet
+              src={data[index].images.planet}
+              alt="planet"
+              ind={index}
+            />
+          </ImgContainer>
           <InfoSection>
-            <NamePlanet>{data[index].name}</NamePlanet>
-            <InfoText>{data[index].overview.content}</InfoText>
-            <SourseDiv>
-              Source :{' '}
-              <SourceLink href={data[index].overview.source}>
-                Wikipedia
-                <LinkSpan />
-              </SourceLink>
-            </SourseDiv>
+            <TextSection>
+              <NamePlanet>{data[index].name}</NamePlanet>
+              <InfoText>{data[index].overview.content}</InfoText>
+              <SourseDiv>
+                Source :{' '}
+                <SourceLink href={data[index].overview.source}>
+                  Wikipedia
+                  <LinkSpan />
+                </SourceLink>
+              </SourseDiv>
+            </TextSection>
             <ButtonList>
               <ButtonItem>
                 <Link to={overview}>

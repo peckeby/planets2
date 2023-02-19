@@ -1,10 +1,24 @@
+import { device } from 'devices.styled';
 import styled from 'styled-components';
 
 export const StatsDiv = styled.section`
+  width: 69.375rem;
   display: flex;
   gap: 1.875rem;
   justify-content: center;
   padding-right: 3.25rem;
+
+  @media ${device.desktopL} {
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 76.375rem;
+  }
+  @media ${device.desktop} {
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const StatsBox = styled.div`

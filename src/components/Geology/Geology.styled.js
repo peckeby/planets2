@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
-export const ImagesDiv = styled.div`
-  position: relative;
-`;
-
 export const ImgGeology = styled.img`
   position: absolute;
-  top: 53%;
-  left: 51%;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;

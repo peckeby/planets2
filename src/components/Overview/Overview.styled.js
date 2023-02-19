@@ -1,22 +1,79 @@
+import { device } from 'devices.styled';
 import styled from 'styled-components';
-
-export const ImgPlanet = styled.img`
-  padding-left: 10.625rem;
-  padding-top: 1.875rem;
-
-  @media screen and (max-height: 1000px) {
-  } ;
-`;
+import { colorSizeArr } from 'assets/colorsSizeArr';
 
 export const DivInfo = styled.section`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 5.4375rem;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    margin-top: 28.75rem;
+  }
+
+  @media ${device.desktop} {
+    width: 1110px;
+    flex-direction: row;
+    margin: 0 0 5.4375rem 0;
+    justify-content: space-between;
+  }
+  @media ${device.desktopL} {
+    margin-top: 3rem;
+  }
+`;
+
+export const ImgContainer = styled.div`
+  @media ${device.desktop} {
+    flex-grow: 0.71;
+    width: ${props => colorSizeArr[props.ind].sizeS}px;
+    position: relative;
+    width: fit-content;
+  }
+  @media ${device.desktopL} {
+    flex-grow: 0.54;
+  }
+`;
+
+export const ImgPlanet = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: ${props => colorSizeArr[props.ind].sizeS}px;
+  height: ${props => colorSizeArr[props.ind].sizeS}px;
+
+  @media ${device.tablet} {
+    top: 51.5%;
+    width: ${props => colorSizeArr[props.ind].sizeM}px;
+    height: ${props => colorSizeArr[props.ind].sizeM}px;
+  }
+
+  @media ${device.desktop} {
+    top: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: ${props => colorSizeArr[props.ind].size}px;
+    height: ${props => colorSizeArr[props.ind].size}px;
+  }
+  @media ${device.desktopL} {
+    width: ${props => colorSizeArr[props.ind].sizeL}px;
+    height: ${props => colorSizeArr[props.ind].sizeL}px;
+  }
 `;
 
 export const InfoSection = styled.div`
-  margin-left: 18.75rem;
+  display: flex;
+  gap: 4.313rem;
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
+  @media ${device.desktop} {
+    display: block;
+  } ;
+`;
+
+export const TextSection = styled.div`
+  display: block;
 `;
 
 export const NamePlanet = styled.h2`
@@ -28,11 +85,12 @@ export const NamePlanet = styled.h2`
 
 export const InfoText = styled.p`
   margin-top: 1.4375rem;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   font-family: 'Spartan';
-  line-height: 1.56rem;
+  line-height: 1.563rem;
   margin-bottom: 1.4375rem;
   max-width: 21.88rem;
+  height: 9.375rem;
 `;
 
 export const SourseDiv = styled.p`

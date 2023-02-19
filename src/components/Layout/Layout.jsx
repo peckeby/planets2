@@ -5,17 +5,16 @@ import { Suspense } from 'react';
 // import { Container } from './Layout.styled';
 import Header from './Header/Header';
 import { GlobalStyle } from 'components/GlobalStyle';
+import { Loader } from 'components/Loader/Loader';
 
 function Layout() {
   return (
     <div className="mainContainer">
       <Header />
       <main>
-        {/* <Container> */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
-        {/* </Container> */}
       </main>
       <GlobalStyle />
     </div>

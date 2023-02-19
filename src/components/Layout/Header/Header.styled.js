@@ -1,10 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from 'devices.styled';
 
-export const NavBar = styled.nav`
-  display: flex;
-  gap: 2.0625rem;
-  align-items: center;
+export const NavBar = styled.ul`
+  @media ${device.desktop} {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 2.063rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 export const LinkNav = styled(NavLink)`
@@ -15,14 +21,20 @@ export const LinkNav = styled(NavLink)`
   text-transform: uppercase;
   opacity: 0.75;
   font-weight: 700;
+  display: block;
 `;
 
 export const LinkHeadline = styled(NavLink)`
+  margin-bottom: 2.438rem;
   text-transform: uppercase;
   font-family: 'Antonio';
   font-size: 1.75rem;
   line-height: 2.25rem;
-  margin: 0;
+  text-align: center;
+
+  @media ${device.desktop} {
+    margin: 0;
+  }
 `;
 
 export const SpanHr = styled.span`

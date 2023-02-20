@@ -1,11 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
 import { Suspense } from 'react';
-// import { Container } from './Layout.styled';
 import Header from './Header/Header';
-import { GlobalStyle } from 'components/GlobalStyle';
 import { Loader } from 'components/Loader/Loader';
+import { GlobalStyle } from 'components/GlobalStyle';
 
 function Layout() {
   return (

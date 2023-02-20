@@ -1,0 +1,14 @@
+:root {
+  --main: #070724;
+  --white: #ffffff;
+  --info: #38384f;
+  --grey: #838391;
+  --mercury: #419ebb;
+}
+
+body {
+  margin: 0;
+  color: var(--white);
+  background-color: var(--main);
+  background-image: url('./assets/background-stars.svg');
+}

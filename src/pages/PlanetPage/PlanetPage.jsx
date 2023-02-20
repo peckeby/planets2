@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { getData, getIsLoading } from 'redux/planetInfo/selectors';
 import PropTypes from 'prop-types';
 import { Outlet, useLocation } from 'react-router-dom';
-import Overview from '../../Overview/Overview';
 import { Loader } from 'components/Loader/Loader';
+import Overview from 'components/Overview/Overview';
 
 export default function PlanetPage({ index }) {
   const data = useSelector(getData);

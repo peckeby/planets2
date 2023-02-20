@@ -15,8 +15,6 @@ $bg-img: url('../../assets/background-stars.svg');
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: $m-01;
-  background-image: $bg-img;
 }
 
 .content {
@@ -74,7 +72,6 @@ $bg-img: url('../../assets/background-stars.svg');
         }
       }
 
-      /* small ball */
       &:before {
         content: '';
         position: absolute;
@@ -87,7 +84,6 @@ $bg-img: url('../../assets/background-stars.svg');
         box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.2);
       }
 
-      /* inner ring */
       &:after {
         content: '';
         position: absolute;
@@ -99,7 +95,6 @@ $bg-img: url('../../assets/background-stars.svg');
       }
     }
 
-    /* to cover the back of the ring */
     .coverRing {
       position: absolute;
       width: 100%;
@@ -114,7 +109,6 @@ $bg-img: url('../../assets/background-stars.svg');
       box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
     }
 
-    /* planet spots */
     .spots {
       width: 100%;
       height: 100%;

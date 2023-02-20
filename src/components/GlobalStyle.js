@@ -36,13 +36,12 @@ ul {
 h2 {
   text-transform: uppercase;
   font-family: 'Antonio';
-  font-size: 1.75rem;
-  line-height: 1.625rem;
   margin: 0;
 }
 
 p {
   margin: 0;
+  line-height: 1.38rem;
 }
 
 a {
@@ -53,6 +52,7 @@ a {
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin-block-end: 0;
 }
 
 button {
@@ -62,9 +62,11 @@ button {
 .mainContainer {
   display: flex;
   flex-direction: column;
+
+  @media ${device.tablet} {
   padding: 2rem 0 0 0;
+}
   @media ${device.desktop} {
-    padding: 1.375rem 0 0 0;
-  };
+  }
 }
 `;

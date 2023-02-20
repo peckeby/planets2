@@ -8,6 +8,11 @@ export const StatsDiv = styled.section`
   justify-content: center;
   padding-right: 3.25rem;
 
+  @media ${device.tablet} {
+    gap: 0.69rem;
+    justify-content: flex-start;
+  }
+
   @media ${device.desktopL} {
     padding-right: 0;
     margin-left: auto;
@@ -28,6 +33,11 @@ export const StatsBox = styled.div`
   padding-left: 1.4375rem;
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
   max-height: 8rem;
+
+  @media ${device.tablet} {
+    max-width: 10.25rem;
+    padding: 1rem 0 1.1875rem 0.9375rem;
+  }
 `;
 
 export const StatsName = styled.p`
@@ -39,6 +49,11 @@ export const StatsName = styled.p`
   font-weight: 700;
   margin-right: 0.5rem;
   text-transform: uppercase;
+  @media ${device.tablet} {
+    font-size: 0.5rem;
+    line-height: 1rem;
+    margin-bottom: 0.375rem;
+  }
 `;
 
 export const StatsNum = styled.p`
@@ -46,4 +61,8 @@ export const StatsNum = styled.p`
   line-height: 3.25rem;
   font-family: 'Antonio';
   text-transform: uppercase;
+  @media ${device.tablet} {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
 `;

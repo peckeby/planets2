@@ -7,7 +7,7 @@ export const DivInfo = styled.section`
   flex-direction: column;
 
   @media ${device.tablet} {
-    margin-top: 28.75rem;
+    margin-top: 5.75rem;
   }
 
   @media ${device.desktop} {
@@ -31,6 +31,12 @@ export const ImgContainer = styled.div`
   @media ${device.desktopL} {
     flex-grow: 0.54;
   }
+
+  @media ${device.tablet} {
+    flex-grow: 0;
+    height: 0;
+    margin-bottom: 14.5rem;
+  }
 `;
 
 export const ImgPlanet = styled.img`
@@ -42,9 +48,9 @@ export const ImgPlanet = styled.img`
   height: ${props => colorSizeArr[props.ind].sizeS}px;
 
   @media ${device.tablet} {
-    top: 51.5%;
     width: ${props => colorSizeArr[props.ind].sizeM}px;
     height: ${props => colorSizeArr[props.ind].sizeM}px;
+    position: relative;
   }
 
   @media ${device.desktop} {
@@ -66,6 +72,7 @@ export const InfoSection = styled.div`
 
   @media ${device.tablet} {
     justify-content: space-between;
+    max-width: 43.0625rem;
   }
   @media ${device.desktop} {
     display: block;
@@ -74,32 +81,50 @@ export const InfoSection = styled.div`
 
 export const TextSection = styled.div`
   display: block;
+  @media ${device.tablet} {
+    max-width: 21.1875rem;
+  }
 `;
 
 export const NamePlanet = styled.h2`
-  font-size: 5rem;
-  line-height: 6.5rem;
   text-transform: uppercase;
   font-family: 'Antonio';
+  @media ${device.tablet} {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  @media ${device.desktop} {
+    font-size: 5rem;
+  } ;
 `;
 
 export const InfoText = styled.p`
-  margin-top: 1.4375rem;
-  font-size: 0.875rem;
   font-family: 'Spartan';
-  line-height: 1.563rem;
-  margin-bottom: 1.4375rem;
-  max-width: 21.88rem;
-  height: 9.375rem;
+  font-size: 0.69rem;
+  margin-bottom: 2rem;
+  min-height: 6.875rem;
+
+  @media ${device.desktop} {
+    margin-top: 1.4375rem;
+    font-size: 0.875rem;
+    line-height: 1.563rem;
+    margin-bottom: 1.4375rem;
+    max-width: 21.88rem;
+    min-height: 9.375rem;
+  } ;
 `;
 
 export const SourseDiv = styled.p`
   font-size: 0.88rem;
-  line-height: 1.56rem;
+  line-height: 1.563rem;
   font-family: 'Spartan';
   opacity: 0.5;
   width: 21.88rem;
   margin-bottom: 2.4375rem;
+
+  @media ${device.tablet} {
+    font-size: 0.75rem;
+  }
 `;
 
 export const SourceLink = styled.a`
@@ -143,9 +168,15 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   font-size: 0.75rem;
-  line-height: 1.56rem;
+  line-height: 1.563rem;
   letter-spacing: 0.19rem;
   text-transform: uppercase;
+
+  @media ${device.tablet} {
+    width: 17.56rem;
+    height: 2.5rem;
+    font-size: 0.56rem;
+  }
 
   &:hover {
     background: rgba(85, 85, 85, 0.2);

@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import { device } from 'devices.styled';
 
 export const NavBar = styled.ul`
+  display: flex;
+  gap: 2.0625rem;
+  margin-top: 0;
+  margin-bottom: 1.6875rem;
+
   @media ${device.desktop} {
     justify-content: center;
     align-items: center;
-    display: flex;
-    gap: 2.063rem;
     margin-bottom: 0;
-    margin-top: 0;
   }
 `;
 
@@ -22,6 +24,16 @@ export const LinkNav = styled(NavLink)`
   opacity: 0.75;
   font-weight: 700;
   display: block;
+  padding-top: 2.06rem;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.active {
+    border-top: 4px solid ${props => props.overLineColor};
+    padding-top: 1.8125rem;
+  }
 `;
 
 export const LinkHeadline = styled(NavLink)`
@@ -33,7 +45,10 @@ export const LinkHeadline = styled(NavLink)`
   text-align: center;
 
   @media ${device.desktop} {
-    margin: 0;
+    margin-top: 1.38rem;
+    margin-bottom: 0;
+  }
+  @media ${device.tablet} {
   }
 `;
 

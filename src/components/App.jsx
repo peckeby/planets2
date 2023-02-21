@@ -9,8 +9,6 @@ import WelcomePage from '../pages/WelcomePage/WelcomePage';
 import Structure from './Structure/Structure';
 import Geology from './Geology/Geology';
 import { Loader } from './Loader/Loader';
-import Media from 'react-media';
-import MobileMenu from './MobileMenu/MobileMenu';
 
 export const App = () => {
   const loading = useSelector(getIsLoading);

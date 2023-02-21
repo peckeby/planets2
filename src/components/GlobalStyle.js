@@ -1,11 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 import { device } from 'devices.styled';
+import img from '../assets/background-stars.svg';
 
 export const GlobalStyle = createGlobalStyle`
 
 header {
   @media ${device.mobile}{
-  max-height: 67px;
+  max-height: 68px;
+  min-width: 100vw;
+  position: fixed;
+  background-image: url(${img});
+  background-color: var(--main);
   }
   @media ${device.tablet}{
     display: flex;

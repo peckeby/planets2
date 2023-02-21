@@ -27,7 +27,7 @@
   @extend .b_a;
   position: absolute;
   top: 33px;
-  left: 20.438rem;
+  left: 87%;
   &:before {
     @extend .b_a;
     top: -8px;
@@ -40,7 +40,7 @@
 
 .menu_expanded {
   transition: all 0.25s;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   text-align: center;
   height: 100vh;

@@ -54,6 +54,13 @@ export const LinkHeadline = styled(NavLink)`
   line-height: 2.25rem;
   text-align: center;
 
+  @media ${device.mobile} {
+    display: inline-block;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
   @media ${device.desktop} {
     margin-top: 1.38rem;
     margin-bottom: 0;

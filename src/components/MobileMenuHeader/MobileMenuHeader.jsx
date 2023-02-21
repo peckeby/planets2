@@ -18,11 +18,8 @@ export const MobileMenuHeader = () => {
     <>
       <header>
         <LinkHeadline to="/">the planets</LinkHeadline>
-        <div
-          className={isActive ? s.menu_expanded : s.menu_collapsed}
-          onClick={handleToggle}
-        >
-          <div className={s.bar}></div>
+        <div className={s.bar} onClick={handleToggle}></div>
+        <div className={isActive ? s.menu_collapsed : s.menu_expanded}>
           <NavBar>
             <ul>
               <li>

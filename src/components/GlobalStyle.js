@@ -4,15 +4,17 @@ import { device } from 'devices.styled';
 export const GlobalStyle = createGlobalStyle`
 
 header {
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  @media ${device.mobile}{
+  max-height: 67px;
+  }
+  @media ${device.tablet}{
+    display: flex;
+    flex-direction: column;
+  }
   @media ${device.desktop} {
+    justify-content: space-between;
     flex-direction: row;
     padding: 0 2.563rem 1.688rem 1.938rem;
-
   }
 }
 

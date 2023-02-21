@@ -1,4 +1,4 @@
-import { colorSizeArr } from 'assets/colorsSizeArr';
+import { planets_sizes } from 'assets/planets_sizes';
 import {
   Button,
   ButtonItem,
@@ -24,7 +24,7 @@ export default function Structure({ index }) {
   const overview = `/${data[index].name.toLowerCase()}`;
   const locate = data[index].images.internal;
 
-  const colorPlanet = colorSizeArr[index];
+  const colorPlanet = planets_sizes[index];
 
   return (
     <>

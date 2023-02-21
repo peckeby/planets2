@@ -1,4 +1,4 @@
-export const colorSizeArr = [
+export const planets_sizes = [
   {
     planetName: 'mercury',
     color: '#419EBB',

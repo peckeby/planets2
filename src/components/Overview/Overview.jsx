@@ -17,12 +17,12 @@ import {
   SpanNum,
   TextSection,
 } from './Overview.styled';
-import { colorSizeArr } from 'assets/colorsSizeArr';
+import { planets_sizes } from 'assets/planets_sizes';
 
 export default function Overview({ index }) {
   const data = useSelector(getData);
   const overview = `/${data[index].name.toLowerCase()}`;
-  const colorPlanet = colorSizeArr[index];
+  const colorPlanet = planets_sizes[index];
 
   return (
     <>

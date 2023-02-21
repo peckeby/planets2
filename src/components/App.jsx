@@ -9,6 +9,8 @@ import WelcomePage from '../pages/WelcomePage/WelcomePage';
 import Structure from './Structure/Structure';
 import Geology from './Geology/Geology';
 import { Loader } from './Loader/Loader';
+import Media from 'react-media';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 export const App = () => {
   const loading = useSelector(getIsLoading);
@@ -26,6 +28,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<WelcomePage />} />
+
             <Route path="/mercury" element={<PlanetPage index={0} />}>
               <Route path="structure" element={<Structure index={0} />} />
               <Route path="geology" element={<Geology index={0} />} />

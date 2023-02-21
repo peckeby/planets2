@@ -16,7 +16,7 @@ import {
   SpanNum,
 } from 'components/Overview/Overview.styled';
 import { ImgGeology } from './Geology.styled';
-import { colorSizeArr } from 'assets/colorsSizeArr';
+import { planets_sizes } from 'assets/planets_sizes';
 
 export default function Geology({ index }) {
   const data = useSelector(getData);
@@ -26,7 +26,7 @@ export default function Geology({ index }) {
   const geologyImg = '.' + data[index].images.geology;
   const overviewImg = '.' + data[index].images.planet;
 
-  const colorPlanet = colorSizeArr[index];
+  const colorPlanet = planets_sizes[index];
 
   return (
     <>

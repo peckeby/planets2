@@ -1,6 +1,6 @@
 import { device } from 'devices.styled';
 import styled from 'styled-components';
-import { colorSizeArr } from 'assets/colorsSizeArr';
+import { planets_sizes } from 'assets/planets_sizes';
 
 export const DivInfo = styled.section`
   display: flex;
@@ -24,7 +24,7 @@ export const DivInfo = styled.section`
 export const ImgContainer = styled.div`
   @media ${device.desktop} {
     flex-grow: 0.71;
-    width: ${props => colorSizeArr[props.ind].sizeS}px;
+    width: ${props => planets_sizes[props.ind].sizeS}px;
     position: relative;
     width: fit-content;
   }
@@ -44,12 +44,12 @@ export const ImgPlanet = styled.img`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: ${props => colorSizeArr[props.ind].sizeS}px;
-  height: ${props => colorSizeArr[props.ind].sizeS}px;
+  width: ${props => planets_sizes[props.ind].sizeS}px;
+  height: ${props => planets_sizes[props.ind].sizeS}px;
 
   @media ${device.tablet} {
-    width: ${props => colorSizeArr[props.ind].sizeM}px;
-    height: ${props => colorSizeArr[props.ind].sizeM}px;
+    width: ${props => planets_sizes[props.ind].sizeM}px;
+    height: ${props => planets_sizes[props.ind].sizeM}px;
     position: relative;
   }
 
@@ -57,12 +57,12 @@ export const ImgPlanet = styled.img`
     top: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: ${props => colorSizeArr[props.ind].size}px;
-    height: ${props => colorSizeArr[props.ind].size}px;
+    width: ${props => planets_sizes[props.ind].size}px;
+    height: ${props => planets_sizes[props.ind].size}px;
   }
   @media ${device.desktopL} {
-    width: ${props => colorSizeArr[props.ind].sizeL}px;
-    height: ${props => colorSizeArr[props.ind].sizeL}px;
+    width: ${props => planets_sizes[props.ind].sizeL}px;
+    height: ${props => planets_sizes[props.ind].sizeL}px;
   }
 `;
 

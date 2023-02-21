@@ -6,6 +6,29 @@
   --mercury: #419ebb;
 }
 
+@font-face {
+  font-family: Spartan;
+  src: url('./fonts/Spartan-Bold.woff2') format('woff2'),
+    url('./fonts/Spartan-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Spartan;
+  src: url('./fonts/Spartan-Regular.woff2') format('woff2'),
+    url('./fonts/Spartan-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Antonio;
+  src: url('./fonts/Antonio-Regular.woff2') format('woff2'),
+    url('./fonts/Antonio-Regular.woff') format('woff');
+}
+
+html {
+  font-family: Antonio, Spartan;
+}
+
 body {
   margin: 0;
   color: var(--white);

@@ -1,4 +1,10 @@
-import { NavBar, LinkNav, SpanHr, LinkHeadline } from './Header.styled';
+import {
+  NavBar,
+  LinkNav,
+  SpanHr,
+  LinkHeadline,
+  NavBarItem,
+} from './Header.styled';
 
 export default function Header() {
   return (
@@ -7,46 +13,47 @@ export default function Header() {
         <LinkHeadline to="/">the planets</LinkHeadline>
         <nav>
           <NavBar>
-            <li>
+            <NavBarItem>
               <LinkNav to={'/mercury'} overlinecolor={'#419EBB'}>
-                mercury
+                {' '}
+                <p>mercury</p>
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/venus'} overlinecolor={'#EDA249'}>
-                venus
+                <p>venus</p>
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/earth'} overlinecolor={'#6D2ED5'}>
-                earth
+                <p>earth</p>
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/mars'} overlinecolor={'#D14C32'}>
-                mars
+                <p>mars</p>
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/jupiter'} overlinecolor={'#D83A34'}>
                 jupiter
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/saturn'} overlinecolor={'#CD5120'}>
                 saturn
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/uranus'} overlinecolor={'#1EC1A2'}>
                 uranus
               </LinkNav>
-            </li>
-            <li>
+            </NavBarItem>
+            <NavBarItem>
               <LinkNav to={'/neptune'} overlinecolor={'#2D68F0'}>
                 neptune
               </LinkNav>
-            </li>
+            </NavBarItem>
           </NavBar>
         </nav>
       </header>

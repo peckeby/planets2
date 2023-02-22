@@ -7,14 +7,16 @@ export const NavBar = styled.ul`
   gap: 2.0625rem;
   margin-top: 0;
 
-  @media ${device.desktop} {
-    justify-content: center;
-    align-items: center;
+  @media ${device.tablet} {
+    max-width: calc(665rem / 16);
+    justify-content: space-between;
   }
 
-  @media ${device.tablet} {
+  @media ${device.desktop} {
   }
 `;
+
+export const NavBarItem = styled.li``;
 
 export const LinkNav = styled(NavLink)`
   font-family: 'Spartan';
@@ -39,9 +41,12 @@ export const LinkNav = styled(NavLink)`
   }
 
   @media ${device.desktop} {
+    padding-bottom: 0.7rem;
+    padding-top: 1rem;
+    border-top: 4px solid transparent;
+
     &.active {
       border-top: 4px solid ${props => props.overlinecolor};
-      padding-top: 1.8125rem;
     }
   }
 `;
@@ -62,20 +67,22 @@ export const LinkHeadline = styled(NavLink)`
   }
 
   @media ${device.desktop} {
-    margin-top: 1.38rem;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 `;
 
 export const SpanHr = styled.span`
   width: 100vw;
   border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
+
   @media ${device.tablet} {
     position: absolute;
-    z-index: -2;
-    top: 12.3rem;
+    z-index: -1;
+    top: 9.9rem;
   }
-  @media ${device.mobile} {
+
+  @media only ${device.mobile} {
     position: fixed;
     border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
     top: 68px;

@@ -10,6 +10,8 @@ import {
   ImgPlanet,
   InfoSection,
   InfoText,
+  LinkArticle,
+  LinkArticleActive,
   LinkSpan,
   NamePlanet,
   SourceLink,
@@ -18,6 +20,7 @@ import {
   TextSection,
 } from './Overview.styled';
 import { planets_sizes } from 'assets/planets_sizes';
+import Media from 'react-media';
 
 export default function Overview({ index }) {
   const data = useSelector(getData);
@@ -28,50 +31,132 @@ export default function Overview({ index }) {
     <>
       {data && (
         <DivInfo>
-          <ImgContainer ind={index}>
-            <ImgPlanet
-              src={data[index].images.planet}
-              alt="planet"
-              ind={index}
-            />
-          </ImgContainer>
-          <InfoSection>
-            <TextSection>
-              <NamePlanet>{data[index].name}</NamePlanet>
-              <InfoText>{data[index].overview.content}</InfoText>
-              <SourseDiv>
-                Source :{' '}
-                <SourceLink href={data[index].overview.source}>
-                  Wikipedia
-                  <LinkSpan />
-                </SourceLink>
-              </SourseDiv>
-            </TextSection>
-            <ButtonList>
-              <ButtonItem>
-                <Link to={overview}>
-                  <Button type="button" bkgColor={`${colorPlanet.color}`}>
-                    <SpanNum>1</SpanNum>
-                    Overview
-                  </Button>
-                </Link>
-              </ButtonItem>
-              <ButtonItem>
-                <Link to={'structure'}>
-                  <Button type="button" bkgColor={`transparent`}>
-                    <SpanNum>2</SpanNum>
-                    Internal structure
-                  </Button>
-                </Link>
-              </ButtonItem>
-              <ButtonItem>
-                <Button type="button" bkgColor={`transparent`}>
-                  <SpanNum>3</SpanNum>
-                  <Link to={'geology'}>Surface geology </Link>
-                </Button>
-              </ButtonItem>
-            </ButtonList>
-          </InfoSection>
+          <Media
+            queries={{
+              small: '(max-width: 767px)',
+            }}
+          >
+            {matches =>
+              matches.small ? (
+                <>
+                  <ButtonList>
+                    <ButtonItem>
+                      <LinkArticleActive
+                        to={overview}
+                        bkgColor={colorPlanet.color}
+                      >
+                        Overview
+                      </LinkArticleActive>
+                    </ButtonItem>
+                    <ButtonItem>
+                      <LinkArticle to={'structure'}>structure</LinkArticle>
+                    </ButtonItem>
+                    <ButtonItem>
+                      <LinkArticle to={'geology'}>geology</LinkArticle>
+                    </ButtonItem>
+                  </ButtonList>
+                  <ImgContainer ind={index}>
+                    <ImgPlanet
+                      src={data[index].images.planet}
+                      alt="planet"
+                      ind={index}
+                    />
+                  </ImgContainer>
+                  <TextSection>
+                    <NamePlanet>{data[index].name}</NamePlanet>
+                    <InfoText>{data[index].overview.content}</InfoText>
+                    <SourseDiv>
+                      Source :{' '}
+                      <SourceLink href={data[index].overview.source}>
+                        Wikipedia
+                        <LinkSpan />
+                      </SourceLink>
+                    </SourseDiv>
+                  </TextSection>
+                </>
+              ) : (
+                <>
+                  <ImgContainer ind={index}>
+                    <ImgPlanet
+                      src={data[index].images.planet}
+                      alt="planet"
+                      ind={index}
+                    />
+                  </ImgContainer>
+                  <InfoSection>
+                    <TextSection>
+                      <NamePlanet>{data[index].name}</NamePlanet>
+                      <InfoText>{data[index].overview.content}</InfoText>
+                      <SourseDiv>
+                        Source :{' '}
+                        <SourceLink href={data[index].overview.source}>
+                          Wikipedia
+                          <LinkSpan />
+                        </SourceLink>
+                      </SourseDiv>
+                    </TextSection>
+                    <ButtonList>
+                      <ButtonItem>
+                        <Link to={overview}>
+                          <Button
+                            type="button"
+                            bkgColor={`${colorPlanet.color}`}
+                          >
+                            <SpanNum>1</SpanNum>
+                            Overview
+                          </Button>
+                        </Link>
+                      </ButtonItem>
+                      <ButtonItem>
+                        <Link to={'structure'}>
+                          <Button type="button" bkgColor={`transparent`}>
+                            <Media
+                              queries={{
+                                small: '(max-width: 767px)',
+                              }}
+                            >
+                              {matches =>
+                                matches.small ? (
+                                  'structure'
+                                ) : (
+                                  <>
+                                    <SpanNum>2</SpanNum>
+                                    Internal structure
+                                  </>
+                                )
+                              }
+                            </Media>
+                          </Button>
+                        </Link>
+                      </ButtonItem>
+                      <ButtonItem>
+                        <Link to={'geology'}>
+                          <Button type="button" bkgColor={`transparent`}>
+                            <Media
+                              queries={{
+                                small: '(max-width: 767px)',
+                              }}
+                            >
+                              {matches =>
+                                matches.small ? (
+                                  'geology'
+                                ) : (
+                                  <>
+                                    <SpanNum>3</SpanNum>
+                                    Surface geology
+                                  </>
+                                )
+                              }
+                            </Media>
+                          </Button>
+                        </Link>
+                      </ButtonItem>
+                    </ButtonList>
+                  </InfoSection>
+                </>
+              )
+            }
+          </Media>
         </DivInfo>
       )}
     </>

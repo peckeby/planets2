@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import { device } from 'devices.styled';
-import img from '../assets/background-stars.svg';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -8,37 +7,34 @@ header {
   @media ${device.mobile}{
   max-height: 68px;
   min-width: 100vw;
-  position: fixed;
-  background-image: url(${img});
-  background-color: var(--main);
   }
   @media ${device.tablet}{
     display: flex;
+    align-items: center;
     flex-direction: column;
+    min-height: calc(159rem/16);
   }
   @media ${device.desktop} {
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 0 2.563rem 1.688rem 1.938rem;
+    align-items: center;
+    padding: 0 2.563rem 0 1.938rem;
   }
 }
 
 main {
   flex: 1 0 auto;
-  padding: 9.125rem 2.5rem 0 2.438rem;
-
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 0 1.5rem;
   @media ${device.desktop} {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.25rem 10.3125rem 3.5rem 10.3125rem;
-  }
+    }
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
 
 h2 {
   text-transform: uppercase;
@@ -69,11 +65,6 @@ button {
 .mainContainer {
   display: flex;
   flex-direction: column;
-
-  @media ${device.tablet} {
-  padding: 2rem 0 0 0;
-}
-  @media ${device.desktop} {
-  }
+  padding-bottom: 2rem;
 }
 `;

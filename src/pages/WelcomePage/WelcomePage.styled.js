@@ -9,12 +9,14 @@ export const WelcomeSection = styled.section`
   padding-bottom: 0.7rem;
   @media ${device.desktop} {
     flex-direction: row;
+    margin-top: 2rem;
   }
 `;
 
 export const WelcomeDiv = styled.div`
   @media ${device.desktop} {
     margin-left: 8rem;
+    padding-top: 4rem;
   } ;
 `;
 
@@ -31,10 +33,11 @@ export const WelcomeInfo = styled.q`
     max-width: 350px;
   }
   @media ${device.tablet} {
-    max-width: 550px;
+    max-width: 750px;
   }
 
   @media ${device.desktop} {
+    min-width: 550px;
     font-size: 0.88rem;
   }
 `;

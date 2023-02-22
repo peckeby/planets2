@@ -16,22 +16,22 @@ export default function Header() {
             <NavBarItem>
               <LinkNav to={'/mercury'} overlinecolor={'#419EBB'}>
                 {' '}
-                <p>mercury</p>
+                mercury
               </LinkNav>
             </NavBarItem>
             <NavBarItem>
               <LinkNav to={'/venus'} overlinecolor={'#EDA249'}>
-                <p>venus</p>
+                venus
               </LinkNav>
             </NavBarItem>
             <NavBarItem>
               <LinkNav to={'/earth'} overlinecolor={'#6D2ED5'}>
-                <p>earth</p>
+                earth
               </LinkNav>
             </NavBarItem>
             <NavBarItem>
               <LinkNav to={'/mars'} overlinecolor={'#D14C32'}>
-                <p>mars</p>
+                mars
               </LinkNav>
             </NavBarItem>
             <NavBarItem>

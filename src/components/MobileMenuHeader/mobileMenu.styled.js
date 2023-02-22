@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LinkNav, NavBar } from 'components/Header/Header.styled';
+import { LinkNav } from 'components/Header/Header.styled';
 
 export const MenuCollapsed = styled.div`
   transition: all 0.8s;

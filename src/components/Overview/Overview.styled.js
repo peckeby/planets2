@@ -1,4 +1,4 @@
-import { device } from 'devices.styled';
+import { device } from 'assets/devices.styled';
 import styled from 'styled-components';
 import { planets_sizes } from 'assets/planets_sizes';
 import { Link } from 'react-router-dom';

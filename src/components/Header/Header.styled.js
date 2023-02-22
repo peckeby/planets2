@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { device } from 'devices.styled';
+import { device } from 'assets/devices.styled';
 
 export const NavBar = styled.ul`
   display: flex;

@@ -1,4 +1,4 @@
-import { device } from 'devices.styled';
+import { device } from 'assets/devices.styled';
 import styled from 'styled-components';
 
 export const WelcomeSection = styled.section`

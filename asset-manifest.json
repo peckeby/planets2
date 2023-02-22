@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/planets2/static/css/main.16616301.css",
-    "main.js": "/planets2/static/js/main.add309f0.js",
+    "main.css": "/planets2/static/css/main.a6cf6f3e.css",
+    "main.js": "/planets2/static/js/main.29700369.js",
     "index.html": "/planets2/index.html",
-    "main.16616301.css.map": "/planets2/static/css/main.16616301.css.map",
-    "main.add309f0.js.map": "/planets2/static/js/main.add309f0.js.map"
+    "main.a6cf6f3e.css.map": "/planets2/static/css/main.a6cf6f3e.css.map",
+    "main.29700369.js.map": "/planets2/static/js/main.29700369.js.map"
   },
   "entrypoints": [
-    "static/css/main.16616301.css",
-    "static/js/main.add309f0.js"
+    "static/css/main.a6cf6f3e.css",
+    "static/js/main.29700369.js"
   ]
 }

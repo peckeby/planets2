@@ -3,13 +3,13 @@ import { LinkNav } from 'components/Header/Header.styled';
 
 export const MenuCollapsed = styled.div`
   transition: all 0.8s;
+  cursor: pointer;
   position: relative;
-  top: 68px;
-  left: 86%;
+  top: -44px;
+  left: 87%;
   height: 20px;
   width: 27px;
   z-index: 1;
-  cursor: pointer;
   ul {
     transition: all 0s;
     position: relative;
@@ -18,6 +18,7 @@ export const MenuCollapsed = styled.div`
 `;
 
 export const Bar = styled.div`
+  cursor: pointer;
   height: 3px;
   width: 27px;
   border-radius: 15px;

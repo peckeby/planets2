@@ -20,13 +20,15 @@ export const MobileMenuHeader = () => {
   return (
     <>
       <header>
-        <LinkHeadline to="/">the planets</LinkHeadline>
-        <Bar onClick={handleToggle}></Bar>
+        <LinkHeadline to="/" onClick={handleToggle}>
+          the planets
+        </LinkHeadline>
+        <Bar onClick={handleToggle} />
         <>
           {isActive ? (
-            <MenuCollapsed />
+            <MenuCollapsed onClick={handleToggle} />
           ) : (
-            <MenuExpanded>
+            <MenuExpanded onClick={handleToggle}>
               <NavBar>
                 <NavItem>
                   <NavMobileItem color={'#419EBB'} />

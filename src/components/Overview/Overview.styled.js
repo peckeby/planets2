@@ -27,6 +27,7 @@ export const ImgContainer = styled.div`
   min-height: calc(256rem / 16);
   display: flex;
   align-items: center;
+  position: relative;
 
   @media ${device.tablet} {
     margin-bottom: calc(37rem / 16);
@@ -36,7 +37,6 @@ export const ImgContainer = styled.div`
   @media ${device.desktop} {
     flex-grow: 1;
     width: ${props => planets_sizes[props.ind].sizeS}px;
-    position: relative;
     width: fit-content;
   }
 

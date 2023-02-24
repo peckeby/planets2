@@ -11,9 +11,6 @@ export const NavBar = styled.ul`
     max-width: calc(665rem / 16);
     justify-content: space-between;
   }
-
-  @media ${device.desktop} {
-  }
 `;
 
 export const NavBarItem = styled.li``;
@@ -37,6 +34,7 @@ export const LinkNav = styled(NavLink)`
     &.active {
       border-bottom: 4px solid ${props => props.overlinecolor};
       padding-bottom: 1.8125rem;
+      opacity: 1;
     }
   }
 
@@ -47,6 +45,7 @@ export const LinkNav = styled(NavLink)`
 
     &.active {
       border-top: 4px solid ${props => props.overlinecolor};
+      opacity: 1;
     }
   }
 `;

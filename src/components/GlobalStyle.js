@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
 header {
   @media ${device.mobile}{
   max-height: 68px;
-  min-width: 100vw;
   }
   @media ${device.tablet}{
     display: flex;

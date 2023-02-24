@@ -17,10 +17,14 @@ export const MobileMenuHeader = () => {
     setActive(!isActive);
   };
 
+  const handleClick = () => {
+    setActive('false');
+  };
+
   return (
     <>
       <header>
-        <LinkHeadline to="/" onClick={handleToggle}>
+        <LinkHeadline to="/" onClick={handleClick}>
           the planets
         </LinkHeadline>
         <Bar onClick={handleToggle} />

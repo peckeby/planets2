@@ -10,6 +10,7 @@ export const MenuCollapsed = styled.div`
   height: 20px;
   width: 27px;
   z-index: 1;
+
   ul {
     transition: all 0s;
     position: relative;
@@ -26,6 +27,7 @@ export const Bar = styled.div`
   position: absolute;
   top: 33px;
   left: 87%;
+
   &:before {
     content: '';
     position: absolute;
@@ -36,6 +38,7 @@ export const Bar = styled.div`
     background-color: var(--white);
     top: -8px;
   }
+
   &:after {
     content: '';
     position: absolute;
@@ -58,6 +61,7 @@ export const MenuExpanded = styled.div`
   top: 68px;
   left: 0;
   background-color: var(--main);
+
   ul {
     transition: all 0s;
     text-align: start;

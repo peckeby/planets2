@@ -7,12 +7,14 @@ header {
   @media ${device.mobile}{
   max-height: 68px;
   }
+
   @media ${device.tablet}{
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: calc(159rem/16);
   }
+
   @media ${device.desktop} {
     display: flex;
     justify-content: space-between;
@@ -27,6 +29,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem 0 1.5rem;
+  
   @media ${device.desktop} {
     display: flex;
     flex-direction: column;

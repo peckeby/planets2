@@ -18,6 +18,7 @@ export const DivInfo = styled.section`
     margin-top: calc(129rem / 16);
     justify-content: space-between;
   }
+
   @media ${device.desktopL} {
     padding-top: 3rem;
   }
@@ -66,6 +67,7 @@ export const ImgPlanet = styled.img`
     width: ${props => planets_sizes[props.ind].size}px;
     height: ${props => planets_sizes[props.ind].size}px;
   }
+
   @media ${device.desktopL} {
     transform: translate(-50%, -50%);
     width: ${props => planets_sizes[props.ind].sizeL}px;
@@ -83,6 +85,7 @@ export const InfoSection = styled.div`
     justify-content: space-between;
     max-width: 43.0625rem;
   }
+
   @media ${device.desktop} {
     display: block;
   } ;
@@ -95,9 +98,11 @@ export const TextSection = styled.div`
   @media ${device.mobile} {
     margin-bottom: calc(10rem / 16);
   }
+
   @media ${device.desktop}, ${device.tablet} {
     display: block;
   }
+
   @media ${device.tablet} {
     max-width: 21.1875rem;
     margin-bottom: calc(27rem / 16);
@@ -110,10 +115,12 @@ export const NamePlanet = styled.h2`
   font-size: 2.5;
   line-height: 1.38;
   margin-bottom: 1rem;
+
   @media ${device.tablet} {
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
+
   @media ${device.desktop} {
     font-size: 5rem;
   } ;
@@ -130,11 +137,13 @@ export const InfoText = styled.p`
     display: flex;
     align-items: center;
   }
+
   @media ${device.tablet} {
     text-align: start;
     margin-bottom: 2rem;
     min-height: 6.875rem;
   }
+
   @media ${device.desktop} {
     text-align: start;
     margin-top: 1.4375rem;
@@ -155,6 +164,7 @@ export const SourseDiv = styled.p`
   @media ${device.tablet} {
     font-size: 0.88rem;
   }
+
   @media ${device.desktop} {
     margin-bottom: 2.4375rem;
   }

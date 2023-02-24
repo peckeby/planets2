@@ -90,6 +90,7 @@ export const StatsNum = styled.p`
   @media ${device.tablet} {
     font-size: 1.5rem;
   }
+
   @media ${device.desktop} {
     font-size: 2.5rem;
     line-height: 3.25rem;

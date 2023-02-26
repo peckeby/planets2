@@ -29,7 +29,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem 0 1.5rem;
-  
+
   @media ${device.desktop} {
     display: flex;
     flex-direction: column;
@@ -65,8 +65,14 @@ button {
 }
 
 .mainContainer {
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
+
+  @media ${device.mobile}{
+    height: 100%;
+    overflow: auto;
+  }
 }
 `;

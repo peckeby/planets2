@@ -167,6 +167,7 @@ export const SourseDiv = styled.p`
 
   @media ${device.desktop} {
     margin-bottom: 2.4375rem;
+    font-size: 0.875rem;
   }
 `;
 

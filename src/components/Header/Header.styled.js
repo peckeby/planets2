@@ -73,6 +73,7 @@ export const LinkHeadline = styled(NavLink)`
 
 export const SpanHr = styled.span`
   width: 100vw;
+  display: block;
   border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
 
   @media ${device.tablet} {
@@ -82,7 +83,6 @@ export const SpanHr = styled.span`
   }
 
   @media only ${device.mobile} {
-    position: fixed;
     border-bottom: solid 0.0625rem rgba(255, 255, 255, 0.2);
     top: 68px;
   }

@@ -98,10 +98,7 @@ export default function Overview({ index }) {
                     <ButtonList>
                       <ButtonItem>
                         <Link to={overview}>
-                          <Button
-                            type="button"
-                            bkgColor={`${colorPlanet.color}`}
-                          >
+                          <Button type="button" bkgColor={colorPlanet.color}>
                             <SpanNum>1</SpanNum>
                             Overview
                           </Button>

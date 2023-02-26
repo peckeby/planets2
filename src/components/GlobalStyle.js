@@ -3,10 +3,6 @@ import { device } from 'assets/devices.styled';
 
 export const GlobalStyle = createGlobalStyle`
 
-html{
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
 
 header {
   @media ${device.mobile}{
@@ -77,8 +73,8 @@ button {
 
   @media ${device.mobile}{
     height: 100%;
-    overflow: auto;
-    -webkit-overflow-y: auto;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 `;

@@ -3,6 +3,11 @@ import { device } from 'assets/devices.styled';
 
 export const GlobalStyle = createGlobalStyle`
 
+html{
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 header {
   @media ${device.mobile}{
   max-height: 68px;

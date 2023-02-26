@@ -8,11 +8,11 @@ export const NavMobileItem = styled.span`
   background-color: ${props => props.color};
 `;
 export const BurgerButton = styled.button`
-  position: fixed;
+  position: relative;
   width: 24px;
   height: 17px;
   left: 90%;
-  top: 25px;
+  top: 40px;
   display: flex;
   gap: 4px;
   border: none;

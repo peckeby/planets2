@@ -29,7 +29,6 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem 0 1.5rem;
-  width: 100vw;
 
   @media ${device.desktop} {
     display: flex;
@@ -66,6 +65,7 @@ button {
 }
 
 .mainContainer {
+  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;

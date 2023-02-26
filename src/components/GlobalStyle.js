@@ -73,6 +73,7 @@ button {
   @media ${device.mobile}{
     height: 100%;
     overflow: auto;
+    -webkit-overflow-y: auto;
   }
 }
 `;

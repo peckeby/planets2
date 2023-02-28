@@ -35,7 +35,7 @@ $bg-img: url('../../assets/background-stars.svg');
     transform-origin: center center;
     box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
     animation: planet 5s ease infinite alternate;
-    z-index: 2;
+    z-index: 3;
 
     @keyframes planet {
       0% {

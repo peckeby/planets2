@@ -4,7 +4,6 @@ $m-03: #7ea1bf;
 $m-04: #bacbd9;
 $m-05: #bf80a9;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 $bg-img: url('../../assets/background-stars.svg');
 
 .contentBox {
@@ -36,6 +35,7 @@ $bg-img: url('../../assets/background-stars.svg');
     transform-origin: center center;
     box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
     animation: planet 5s ease infinite alternate;
+    z-index: 2;
 
     @keyframes planet {
       0% {
@@ -191,7 +191,7 @@ $bg-img: url('../../assets/background-stars.svg');
     z-index: 2;
     position: absolute;
     bottom: -20px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Spartan', monospace;
     animation: text 4s ease infinite;
     width: 100px;
     text-align: center;

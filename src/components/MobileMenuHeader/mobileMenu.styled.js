@@ -39,7 +39,6 @@ export const ItemList = styled.ul`
   opacity: 0.75;
   font-weight: 700;
   display: flex;
-  transition: all 0s;
   text-align: start;
   flex-direction: column;
   margin-top: 0;

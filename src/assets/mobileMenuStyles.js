@@ -1,7 +1,6 @@
 export const styles = {
   bmMenuWrap: {
     position: 'fixed',
-    width: '100%',
     height: '100vh',
   },
 

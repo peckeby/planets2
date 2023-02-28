@@ -56,6 +56,7 @@ const Navigation = () => {
       </LinkHeadline>
       <SpanHr />
       <Menu
+        width="100%"
         styles={styles}
         customBurgerIcon={false}
         isOpen={ctx.isMenuOpen}

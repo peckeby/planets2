@@ -3,7 +3,6 @@ import { device } from 'assets/devices.styled';
 
 export const GlobalStyle = createGlobalStyle`
 
-
 header {
   @media ${device.mobile}{
   max-height: 68px;
@@ -21,7 +20,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 0 2.563rem 0 1.938rem;
+    padding: 0 1rem 0 1.938rem;
   }
 }
 
@@ -66,15 +65,13 @@ button {
 }
 
 .mainContainer {
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
 
   @media ${device.mobile}{
     height: 100%;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow: auto;
   }
 }
 `;

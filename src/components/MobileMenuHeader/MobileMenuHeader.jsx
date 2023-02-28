@@ -13,7 +13,6 @@ import {
   NavMobileItem,
 } from './mobileMenu.styled';
 import { ReactSVG } from 'react-svg';
-
 import logo from '../../assets/path-icon.svg';
 
 const MyContext = createContext();
@@ -25,7 +24,10 @@ const MyProvider = props => {
     <MyContext.Provider
       value={{
         isMenuOpen: menuOpenState,
-        toggleMenu: () => setMenuOpenState(!menuOpenState),
+        toggleMenu: () => {
+          setMenuOpenState(!menuOpenState);
+          document.body.style.overflow = menuOpenState ? 'auto' : 'hidden';
+        },
         closeMenu: () => setMenuOpenState(false),
         stateChangeHandler: newState => setMenuOpenState(newState.isOpen),
       }}

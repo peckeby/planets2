@@ -18,7 +18,6 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
-    "react-scrolllock": "^5.0.1",
     "react-svg": "^16.1.4",
     "redux-persist": "^6.0.0",
     "sass": "^1.58.0",

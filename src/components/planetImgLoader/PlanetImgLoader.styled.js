@@ -72,7 +72,7 @@ const flyaround = keyframes`
 }
 `;
 
-export const PlanetTop = styled(Loader)`
+export const PlanetTop = styled(LoaderImg)`
   width: 70%;
   height: 70%;
   position: relative;
@@ -83,7 +83,7 @@ export const PlanetTop = styled(Loader)`
   background: linear-gradient(-15deg, #6bbaec 0, #6987c9 50%, transparent 51%);
   animation: ${blinktop} 0.6s linear infinite;
 `;
-export const PlanetBottom = styled(Loader)`
+export const PlanetBottom = styled(LoaderImg)`
   height: 70%;
   width: 70%;
   z-index: 80;
@@ -99,7 +99,7 @@ export const PlanetBottom = styled(Loader)`
   border-radius: 50%;
   animation: ${blinkbot} 0.6s linear infinite;
 `;
-export const Ring = styled(Loader)`
+export const Ring = styled(LoaderImg)`
   width: calc(100% - 6px);
   height: calc(100% / 3);
   position: absolute;
